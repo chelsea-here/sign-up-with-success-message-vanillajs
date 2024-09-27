@@ -243,14 +243,12 @@ body {
   width: 100vw;
   max-width: 100%; /* https://forum.blocsapp.com/t/how-can-i-make-the-modal-fullscreen-solved/11900 */
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   background-color: white;
   border: none;
   overflow: auto;
-  top: 1/2;
-  left: 1/2;
-  transform: translateX(-1/2);
-  transform: translateY(-1/2);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 dialog::backdrop {

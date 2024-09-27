@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/chelsea-here/sign-up-with-success-message-vanillajs](https://github.com/chelsea-here/sign-up-with-success-message-vanillajs)
-- Live Site URL: [https://article-preview-card-gilt.vercel.app/](https://article-preview-card-gilt.vercel.app/)
+- Live Site URL: [https://sign-up-with-success-message-vanillajs.vercel.app/](https://sign-up-with-success-message-vanillajs.vercel.app/)
 
 ## Built with
 
