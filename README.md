@@ -34,11 +34,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/screenshot-mobile.jpeg)
-![](./screenshots/screenshot-mobile-error-state.jpeg)
-![](./screenshots/screenshot-mobile-success-modal.jpeg)
-![](./screenshots/screenshot-desktop.jpeg)
-![](./screenshots/screenshot-desktop-success-modal.jpeg)
+![](./screenshots/screenshot-all.png)
+![](./screenshots/screenshot-all-error-state.png)
+![](./screenshots/screenshot-all-valid-state.png)
+![](./screenshots/screenshot-all-success-modal.jpeg)
 
 ### Links
 
