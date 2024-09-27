@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Frontend Mentor Blog Preview Card Challenge</title>
+    <meta
+      name="description"
+      content="My solution to Frontend Mentor's Blog Preview Card challenge"
+    />
+    <meta name="author" content="Chelsea Anne Livingston Cruz" />
+    <meta keywords="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="/globals.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <script defer src="/index.js"></script>
+  </head>
+  <body class="flexColCenter">
+    <main id="card" class="card flexColCenter">
+      <img
+        src="./assets/images/illustration-sign-up-mobile.svg"
+        alt="Abstract image of browsers and charts"
+        class="mobile"
+      />
+      <img
+        src="./assets/images/illustration-sign-up-desktop.svg"
+        alt="Abstract image of browsers and charts"
+        class="desktop"
+      />
+      <div class="content">
+        <h1 class="heading">Stay updated!</h1>
+        <p className="text-base">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ol role="list" class="list">
+          <li class="listItem">Product discovery and building what matters</li>
+          <li class="listItem">Measuring to ensure updates are a success</li>
+          <li class="listItem">And much more!</li>
+        </ol>
+        <form
+          id="registrationForm"
+          class="form"
+          onsubmit="return SubmitEvent"
+          method="post"
+        >
+          <div>
+            <label for="email" class="label input"> Email address </label>
+            <!-- {isDirty && !isValid && ( -->
+            <span id="emailFeedback" class="label invalidFeedback"></span>
+            <input
+              required
+              aria-required="true"
+              id="email"
+              type="text"
+              name="email"
+              placeholder="email@company.com"
+              autocomplete="email"
+              class="emailInput unfilled"
+            />
+          </div>
+          <input
+            id="submitButton"
+            type="submit"
+            value="Subscribe to monthly newsletter"
+            class="submitInvalid flexColCenter bold"
+          />
+        </form>
+      </div>
+      <dialog id="successModal" class="modal">
+        <div class="inner">
+          <div class="fullWidth">
+            <image src="/assets/images/icon-success.svg" alt="checkmark" />
+            <h1 class="heading modalPadding">Thanks for subscribing!</h1>
+            <p>
+              A confirmation email has been sent to
+              <span id="emailProvided" className="font-bold">{" "}</span>.
+              Please open it and click the button inside to confirm your
+              subscription
+            </p>
+          </div>
+
+          <button
+            id="closeModalButton"
+            class="flexColCenter submitValid closeModalButton"
+          >
+            Dismiss Message
+          </button>
+        </div>
+      </dialog>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+:root {
+  --darkNavy: #242742;
+  --orangeRed: #ff6155;
+  --darkGray: #19182b40;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"),
+    url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+/* Modern reset: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Prevent zooming when orientation changes on some iOS devices */
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Reset ol list preset styling */
+ol.reset,
+ol.reset li,
+ol.reset ol li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+/* end of reset */
+
+body {
+  font-family: "Roboto";
+  color: var(--darkNavy);
+  background-color: white;
+  height: 100%;
+  /* needed for min-height of card  */
+}
+
+.bold {
+  font-family: "Roboto-Bold";
+}
+
+.flexColCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  min-height: 100%;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: white;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+  width: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  gap: 1.5rem;
+}
+
+.heading {
+  font-family: "Roboto-Bold";
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style-position: outside;
+  list-style-image: none;
+  gap: 0.62rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+.listItem {
+  background-image: url("./assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+  padding-left: 2.25rem;
+  background-position: "left top 2px";
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.label {
+  font-family: "Roboto-Bold";
+  font-size: 0.75rem;
+}
+
+.input {
+  float: left;
+  margin-bottom: 0.5rem;
+}
+
+.invalidFeedback {
+  color: var(--orangeRed);
+  float: right;
+}
+
+.emailInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 3.5rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.unfilled {
+  background-color: white;
+  border-color: var(--darkGray);
+}
+
+.inputInvalid {
+  background-color: #ff615526;
+  color: var(--orangeRed);
+  border-color: var(--orangeRed);
+}
+
+.submitInvalid {
+  color: white;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--darkNavy);
+  cursor: not-allowed;
+}
+
+.submitValid {
+  color: white;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
+  cursor: pointer;
+}
+
+.submitValid:hover {
+  box-shadow: 0px 16px 32px 0px #ff615580;
+}
+
+:modal {
+  position: absolute;
+  width: 100vw;
+  max-width: 100%; /* https://forum.blocsapp.com/t/how-can-i-make-the-modal-fullscreen-solved/11900 */
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  border: none;
+  overflow: auto;
+  top: 1/2;
+  left: 1/2;
+  transform: translateX(-1/2);
+  transform: translateY(-1/2);
+}
+
+dialog::backdrop {
+  background-color: white;
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 12vh;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.innerTop {
+  width: 100%;
+}
+
+.modalPadding {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.closeModalButton {
+  width: 100%;
+  background: var(--darkNavy);
+  color: white;
+  height: 3.5rem;
+  font-family: "Roboto-Bold";
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: 1.5rem;
+}
+
+.closeModalButton:hover {
+  background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
+  cursor: pointer;
+  box-shadow: 0px 16px 32px 0px #ff615580;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: var(--darkNavy);
+  }
+  .card {
+    min-height: 0;
+    width: 58rem;
+    flex-direction: row-reverse; /* check on this */
+    gap: 4rem;
+    padding: 1.5rem;
+    border-radius: 2.25rem;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .heading {
+    font-size: 3.5rem;
+  }
+  :modal {
+    width: 31.5rem;
+    height: 32.5rem;
+    border-radius: 2.25rem;
+  }
+  .inner {
+    justify-content: center;
+    padding-top: 1.75rem;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+    padding-bottom: 1.75rem;
+  }
+  .closeModalButton {
+    margin-top: 2.5rem;
+  }
+  dialog::backdrop {
+    background-color: #36384d;
+  }
+}
