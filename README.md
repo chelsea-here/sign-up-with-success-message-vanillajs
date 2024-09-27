@@ -34,10 +34,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/screenshot%20desktop.jpeg)
-![](./public/screenshot%20desktop-active.jpeg)
-![](./public/screenshot%20mobile.jpeg)
-![](./public/screenshot%20mobile-active.jpeg)
+![](./screenshots/screenshot-mobile.jpeg)
+![](./screenshots/screenshot-mobile-error-state.jpeg)
+![](./screenshots/screenshot-mobile-success-modal.jpeg)
+![](./screenshots/screenshot-desktop.jpeg)
+![](./screenshots/screenshot-desktop-success-modal.jpeg)
 
 ### Links
 
@@ -54,7 +55,7 @@ Users should be able to:
 
 ### Resources
 
-- [YouTube video on list-styline using background image] (https://youtu.be/M5audtofhIo?si=HkL1phEmanmTbje7)
+- [YouTube video on list-styling using background image] (https://youtu.be/M5audtofhIo?si=HkL1phEmanmTbje7)
 
 ## Author
 
