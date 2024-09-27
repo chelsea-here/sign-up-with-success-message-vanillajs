@@ -37,7 +37,7 @@ Users should be able to:
 ![](./screenshots/screenshot-all.png)
 ![](./screenshots/screenshot-all-error-state.png)
 ![](./screenshots/screenshot-all-valid-state.png)
-![](./screenshots/screenshot-all-success-modal.jpeg)
+![](./screenshots/screenshot-all-success-modal.png)
 
 ### Links
 
